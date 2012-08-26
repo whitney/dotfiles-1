@@ -57,3 +57,5 @@ export LC_ALL="en_US.UTF-8"
 export ACK_COLOR_FILENAME="cyan"
 export ACK_COLOR_MATCH="bold red"
 
+# Re-enable colors at the terminal level for ls
+export CLICOLOR=1
