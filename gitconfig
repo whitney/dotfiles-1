@@ -1,6 +1,6 @@
 [user]
-  name = Jonathan Palardy
-  email = jonathan.palardy@gmail.com
+  name = Francois Richard
+  email = frichard@xobni.com
 [color]
   ui = auto
 [alias]
@@ -11,6 +11,10 @@
   ignored = ls-files --others -i --exclude-standard
   ffm     = merge --ff-only
   ffp     = pull --ff-only
+  l       = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-co    mmit --date=relative
+  ll      = log --pretty=oneline --abbrev-commit --max-count=15
+  lg      = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>    %Creset' --abbrev-commit --date=relative
+
 [diff]
   noprefix = true
   tool = vimdiff
