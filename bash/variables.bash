@@ -63,4 +63,6 @@ export CLICOLOR=1
 
 # Setup the GOROOT for GoLang
 export GOROOT="/usr/local/go"
-
+# Setup of the GOPATH for GoLang
+export GOPATH="$HOME/work/golang"
+unshift_path "$GOPATH"
