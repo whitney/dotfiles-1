@@ -39,6 +39,7 @@ unshift_path "/usr/X11"
 unshift_path ""
 unshift_path "/usr"
 unshift_path "/usr/local"
+unshift_path "/usr/local/go"
 unshift_path "/opt/local"
 unshift_path "$HOME/local"
 unshift_path "$DOTFILES"
@@ -59,3 +60,7 @@ export ACK_COLOR_MATCH="bold red"
 
 # Re-enable colors at the terminal level for ls
 export CLICOLOR=1
+
+# Setup the GOROOT for GoLang
+export GOROOT="/usr/local/go"
+
