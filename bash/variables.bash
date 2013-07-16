@@ -60,6 +60,7 @@ export ACK_COLOR_MATCH="bold red"
 
 # Re-enable colors at the terminal level for ls
 export CLICOLOR=1
+export TERM=xterm-256color
 
 # Setup the GOROOT for GoLang
 export GOROOT="/usr/local/go"
