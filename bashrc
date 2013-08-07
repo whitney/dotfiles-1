@@ -29,3 +29,9 @@ if [[ $- =~ i ]]; then
   cond_source $HOME/.bash/local/prompt.bash
 fi
 
+# Finally Source global definitions
+if [ -f /etc/bashrc ]; then
+. /etc/bashrc
+fi
+
+

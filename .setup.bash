@@ -2,8 +2,28 @@
 
 flag="$@"
 
+# contains(string, substring)
+#
+# Returns 0 if the specified string contains the specified substring,
+# otherwise returns 1.
+function contains() {
+    string="$1"
+    substring="$2"
+    if test "${string#*$substring}" != "$string"
+    then
+        return 0    # $substring is in $string
+    else
+        return 1    # $substring is not in $string
+    fi
+}
+
 function relink() {
-  ln -s -h -v $flag $2 $1
+  if [ -n "$YAHOO_OS" ]
+  then
+    ln -s -n -v $flag $2 $1
+  else
+    ln -s -h -v $flag $2 $1
+  fi
 }
 
 function lowercase(){
@@ -14,6 +34,7 @@ OS=`lowercase \`uname\``
 KERNEL=`uname -r`
 MACH=`uname -m`
 DOTFILES=$(pwd)
+contains $KERNEL "YAHOO" && YAHOO_OS="true"
 
 cd
 
