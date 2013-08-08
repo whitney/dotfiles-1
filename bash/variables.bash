@@ -44,8 +44,6 @@ unshift_path "/opt/local"
 unshift_path "$HOME/local"
 unshift_path "$DOTFILES"
 
-export PATH=$(prepend_colon ".local" $PATH)
-
 export EDITOR="vim"
 export PAGER="less"
 export BLOCKSIZE="K"
@@ -67,3 +65,8 @@ export GOROOT="/usr/local/go"
 # Setup of the GOPATH for GoLang
 export GOPATH="$HOME/work/golang"
 unshift_path "$GOPATH"
+
+# Update the PATH to support Mono build for Yahoo
+unshift_path /home/y/share/mono-2.10
+
+export PATH=$(prepend_colon ".local" $PATH)
