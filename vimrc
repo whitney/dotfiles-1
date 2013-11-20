@@ -5,8 +5,10 @@
 " VIM, not VI
 set nocompatible
 
-" pathogen bundles
+" pathogen and go bundles
 filetype off
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
 call pathogen#runtime_append_all_bundles()
 
 " General appearance and behaviour
