@@ -3,6 +3,11 @@ function cond_source () {
   [ -f $1 ] && . $1
 }
 
+# First source global definitions
+if [ -f /etc/bashrc ]; then
+  . /etc/bashrc
+fi
+
 # variables
 source      $HOME/.bash/variables.bash
 cond_source $HOME/.bash/local/variables.bash
@@ -28,10 +33,3 @@ if [[ $- =~ i ]]; then
   source      $HOME/.bash/prompt.bash
   cond_source $HOME/.bash/local/prompt.bash
 fi
-
-# Finally Source global definitions
-if [ -f /etc/bashrc ]; then
-. /etc/bashrc
-fi
-
-
