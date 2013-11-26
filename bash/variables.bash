@@ -65,6 +65,9 @@ export GOROOT="/usr/local/go"
 # Setup of the GOPATH for GoLang
 export GOPATH="$HOME/work/golang"
 unshift_path "$GOPATH"
+# Update the PATH to support ylinux
+export PATH=$(prepend_colon "/home/y/bin" $PATH)
+export PATH=$(prepend_colon "/home/y/bin64" $PATH)
 
 # Update the PATH to support Mono build for Yahoo
 unshift_path /home/y/share/mono-2.10
